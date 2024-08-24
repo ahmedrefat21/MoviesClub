@@ -17,6 +17,7 @@
 		8BD347432C7A81D500E922DD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347422C7A81D500E922DD /* Movie.swift */; };
 		8BD347452C7A81F500E922DD /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347442C7A81F500E922DD /* MovieDetail.swift */; };
 		8BD347472C7A821100E922DD /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347462C7A821100E922DD /* Genre.swift */; };
+		8BD3474A2C7A842400E922DD /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347492C7A842400E922DD /* MovieEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8BD347422C7A81D500E922DD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8BD347442C7A81F500E922DD /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		8BD347462C7A821100E922DD /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		8BD347492C7A842400E922DD /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		8BD3472B2C7A7EAD00E922DD /* MoviesClub */ = {
 			isa = PBXGroup;
 			children = (
+				8BD347482C7A83FD00E922DD /* Networking */,
 				8BD3473F2C7A816E00E922DD /* Model */,
 				8BD3472C2C7A7EAD00E922DD /* MoviesClubApp.swift */,
 				8BD3472E2C7A7EAD00E922DD /* ContentView.swift */,
@@ -91,6 +94,14 @@
 				8BD347462C7A821100E922DD /* Genre.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8BD347482C7A83FD00E922DD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8BD347492C7A842400E922DD /* MovieEndpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				8BD3472F2C7A7EAD00E922DD /* ContentView.swift in Sources */,
 				8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */,
 				8BD347472C7A821100E922DD /* Genre.swift in Sources */,
+				8BD3474A2C7A842400E922DD /* MovieEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
