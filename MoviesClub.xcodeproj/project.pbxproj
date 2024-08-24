@@ -21,6 +21,7 @@
 		8BD3474C2C7A850900E922DD /* MovieURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3474B2C7A850900E922DD /* MovieURL.swift */; };
 		8BD3474E2C7A869000E922DD /* GenericNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */; };
 		8BD347512C7A880200E922DD /* CSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347502C7A880200E922DD /* CSError.swift */; };
+		8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347522C7A88A000E922DD /* MovieNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8BD3474B2C7A850900E922DD /* MovieURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieURL.swift; sourceTree = "<group>"; };
 		8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkService.swift; sourceTree = "<group>"; };
 		8BD347502C7A880200E922DD /* CSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSError.swift; sourceTree = "<group>"; };
+		8BD347522C7A88A000E922DD /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8BD347492C7A842400E922DD /* MovieEndpoint.swift */,
 				8BD3474B2C7A850900E922DD /* MovieURL.swift */,
 				8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */,
+				8BD347522C7A88A000E922DD /* MovieNetwork.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				8BD3474C2C7A850900E922DD /* MovieURL.swift in Sources */,
 				8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */,
 				8BD347472C7A821100E922DD /* Genre.swift in Sources */,
+				8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */,
 				8BD3474A2C7A842400E922DD /* MovieEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

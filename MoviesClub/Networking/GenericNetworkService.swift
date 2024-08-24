@@ -11,7 +11,7 @@ struct GenericNetworkService {
     
     private static let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
     
-    static func getData<T:Codable>(from url: URL,completion: @escaping(Result<T,CSError>) -> Void) {
+    static func getData<T:Decodable>(from url: URL,completion: @escaping(Result<T,CSError>) -> Void) {
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { data, response, error in
             
