@@ -12,45 +12,45 @@ class MovieNetwork {
     
   
     
-    func fetchPopularList(completion: @escaping(Result<Movies,CSError>) -> Void) {
+    func fetchPopularList() async throws -> Movies {
         let url = MovieURL.popularListUrl
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchTopRatedList(completion:@escaping(Result<Movies,CSError>) -> Void){
+
+    func fetchTopRatedList() async throws -> Movies {
         let url = MovieURL.topRatedListUrl
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchUpcomingList(completion: @escaping(Result<Movies,CSError>) -> Void) {
+
+    func fetchUpcomingList() async throws -> Movies {
         let url = MovieURL.upcomingListUrl
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchNowPlayingList(completion: @escaping(Result<Movies,CSError>) -> Void) {
+
+    func fetchNowPlayingList() async throws -> Movies {
         let url = MovieURL.nowPlayinListUrl
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchWithGenreMovies(with genreId: Int,completion:@escaping(Result<Movies,CSError>) -> Void){
+
+    func fetchWithGenreMovies(with genreId: Int) async throws -> Movies {
         let url = MovieURL.moviesWithGenreUrl(withGenre: "\(genreId)")
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchMovieSearch(query:String,completion: @escaping(Result<Movies,CSError>) -> Void){
+
+    func fetchMovieSearch(query: String) async throws -> Movies {
         let url = MovieURL.movieSearchUrl(withQuery: query)
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    func fetchMovieDetail(withId movieId: Int,completion: @escaping(Result<MovieDetail,CSError>) -> Void){
+
+    func fetchMovieDetail(withId movieId: Int) async throws -> MovieDetail {
         let url = MovieURL.movieDetailUrl(withId: "\(movieId)")
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
-    
-    
-    func fetchSimilarList(withId movieId: Int,completion: @escaping(Result<Movies,CSError>) -> Void ) {
+
+    func fetchSimilarList(withId movieId: Int) async throws -> Movies {
         let url = MovieURL.similar(withId: "\(movieId)")
-        GenericNetworkService.getData(from: url, completion: completion)
+        return try await GenericNetworkService.getData(from: url)
     }
+
     
 }

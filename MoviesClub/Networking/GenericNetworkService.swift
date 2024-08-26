@@ -11,39 +11,34 @@ struct GenericNetworkService {
     
     private static let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
     
-    static func getData<T:Decodable>(from url: URL,completion: @escaping(Result<T,CSError>) -> Void) {
+    
+    static func getData<T: Decodable>(from url: URL) async throws -> T {
         let request = URLRequest(url: url)
-        let task = session.dataTask(with: request) { data, response, error in
+        
+        do {
+            let (data, response) = try await session.data(for: request)
             
-            if let anyError = error {
-                print(anyError.localizedDescription)
-                completion(.failure(.unableToComplete))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse ,(200...299).contains(response.statusCode) else {
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 print("Error in response")
-                completion(.failure(.invailedResponse))
-                return
+                throw CSError.invailedResponse
             }
             
-            guard let data = data else {
-                print("Error in data")
-                completion(.failure(.invailedData))
-                return
-            }
+            let decoder = JSONDecoder()
+            return try decoder.decode(T.self, from: data)
             
-            do {
-                let decoder = JSONDecoder()
-                let result = try decoder.decode(T.self, from: data)
-                completion(.success(result))
-            } catch (let error) {
-                print("Cache error \(error.localizedDescription)")
-                completion(.failure(.invailedData))
+        } catch {
+            if let urlError = error as? URLError {
+                print(urlError.localizedDescription)
+                throw CSError.unableToComplete
+            } else if let decodingError = error as? DecodingError {
+                print("Decoding error: \(decodingError.localizedDescription)")
+                throw CSError.invailedData
+            } else {
+                print("Unknown error: \(error.localizedDescription)")
+                throw CSError.unableToComplete
             }
         }
-        task.resume()
-        
     }
+
     
 }
