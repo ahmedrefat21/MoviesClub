@@ -15,12 +15,13 @@ struct TopRatedListItem: View {
     //MARK: - BODY
     var body: some View {
         ZStack {
+            //MARK: - MovieImage
             if let imagePath = movie.poster_path{
                 CustomImageView(imagePath: imagePath)
                     .scaledToFit()
                     .frame(width: 140,height: 210)
                     .clipShape(.rect(cornerRadius: 16))
-                
+                //MARK: - MovieOrder
                 StrokeText(
                     text: "\(number)",
                     width: 0.75,

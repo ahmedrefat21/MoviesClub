@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationBarView: View {
+    //MARK: - BODY
     var body: some View {
         HStack {
             Spacer()
