@@ -18,6 +18,9 @@
 		8BCA1A412C7C7BC100AD6B6F /* NowPlayingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A402C7C7BC100AD6B6F /* NowPlayingListItem.swift */; };
 		8BCA1A432C7C7C3700AD6B6F /* DoubleFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A422C7C7C3700AD6B6F /* DoubleFormatter.swift */; };
 		8BCA1A472C7C7F0000AD6B6F /* StandardListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A462C7C7F0000AD6B6F /* StandardListItem.swift */; };
+		8BCA1A492C7C800E00AD6B6F /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A482C7C800E00AD6B6F /* MovieList.swift */; };
+		8BCA1A4B2C7C811500AD6B6F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A4A2C7C811500AD6B6F /* TitleView.swift */; };
+		8BCA1A4D2C7C814E00AD6B6F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A4C2C7C814E00AD6B6F /* HomeView.swift */; };
 		8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3472C2C7A7EAD00E922DD /* MoviesClubApp.swift */; };
 		8BD3472F2C7A7EAD00E922DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3472E2C7A7EAD00E922DD /* ContentView.swift */; };
 		8BD347312C7A7EAF00E922DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD347302C7A7EAF00E922DD /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		8BCA1A402C7C7BC100AD6B6F /* NowPlayingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingListItem.swift; sourceTree = "<group>"; };
 		8BCA1A422C7C7C3700AD6B6F /* DoubleFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleFormatter.swift; sourceTree = "<group>"; };
 		8BCA1A462C7C7F0000AD6B6F /* StandardListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardListItem.swift; sourceTree = "<group>"; };
+		8BCA1A482C7C800E00AD6B6F /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		8BCA1A4A2C7C811500AD6B6F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		8BCA1A4C2C7C814E00AD6B6F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8BD347292C7A7EAD00E922DD /* MoviesClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD3472C2C7A7EAD00E922DD /* MoviesClubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesClubApp.swift; sourceTree = "<group>"; };
 		8BD3472E2C7A7EAD00E922DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,9 @@
 				8BCA1A3C2C7C7AD100AD6B6F /* StrokeText.swift */,
 				8BCA1A402C7C7BC100AD6B6F /* NowPlayingListItem.swift */,
 				8BCA1A462C7C7F0000AD6B6F /* StandardListItem.swift */,
+				8BCA1A482C7C800E00AD6B6F /* MovieList.swift */,
+				8BCA1A4A2C7C811500AD6B6F /* TitleView.swift */,
+				8BCA1A4C2C7C814E00AD6B6F /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,11 +223,14 @@
 				8BCA1A392C7C797F00AD6B6F /* CustomImageView.swift in Sources */,
 				8BCA1A372C7C78DA00AD6B6F /* BackgroundStyle.swift in Sources */,
 				8BCA1A3B2C7C7A7300AD6B6F /* TopRatedListItem.swift in Sources */,
+				8BCA1A492C7C800E00AD6B6F /* MovieList.swift in Sources */,
 				8BCA1A432C7C7C3700AD6B6F /* DoubleFormatter.swift in Sources */,
 				8BD347362C7A7EB000E922DD /* Persistence.swift in Sources */,
+				8BCA1A4D2C7C814E00AD6B6F /* HomeView.swift in Sources */,
 				8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */,
 				8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */,
 				8BD3472F2C7A7EAD00E922DD /* ContentView.swift in Sources */,
+				8BCA1A4B2C7C811500AD6B6F /* TitleView.swift in Sources */,
 				8BCA1A3D2C7C7AD100AD6B6F /* StrokeText.swift in Sources */,
 				8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */,
 				8BCA1A302C7C77E700AD6B6F /* NavigationBarView.swift in Sources */,
