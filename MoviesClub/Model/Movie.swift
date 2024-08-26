@@ -9,17 +9,32 @@ import Foundation
 
 struct Movie: Decodable{
     let adult: Bool?
-    let backdrop_path: String?
-    let genre_ids: [Int]?
+    let backdropPath: String?
+    let genreIDS: [Int]?
     let id: Int?
-    let original_title: String?
+    let originalTitle: String?
     let overview: String?
     let popularity: Double?
-    let poster_path: String?
-    let release_date: String?
+    let posterPath: String?
+    let releaseDate: String?
     let title: String?
     let video: Bool?
-    let vote_average: Double?
-    let vote_count: Int?
+    let voteAverage: Double?
+    let voteCount: Int?
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case adult
+        case backdropPath = "backdrop_path"
+        case genreIDS = "genre_ids"
+        case id
+        case originalTitle = "original_title"
+        case overview, popularity
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case title, video
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
 }
 
