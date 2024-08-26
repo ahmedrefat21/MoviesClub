@@ -67,8 +67,7 @@
 		8BCA1A282C7C76FD00AD6B6F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8BCA1A2A2C7C772000AD6B6F /* View */,
-				8BCA1A292C7C770F00AD6B6F /* Handler */,
+				8BCA1A4F2C7C82EB00AD6B6F /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -102,6 +101,15 @@
 				8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8BCA1A4F2C7C82EB00AD6B6F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8BCA1A292C7C770F00AD6B6F /* Handler */,
+				8BCA1A2A2C7C772000AD6B6F /* View */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8BD347202C7A7EAD00E922DD = {

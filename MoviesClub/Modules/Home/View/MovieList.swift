@@ -41,7 +41,7 @@ struct MovieList: View {
 }
 
 #Preview {
-    MovieList(movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .nowPlaying)
+    MovieList(movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .standart)
 }
 
 
