@@ -22,6 +22,7 @@
 		8BD3474E2C7A869000E922DD /* GenericNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */; };
 		8BD347512C7A880200E922DD /* CSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347502C7A880200E922DD /* CSError.swift */; };
 		8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347522C7A88A000E922DD /* MovieNetwork.swift */; };
+		8BEAEA552C7E040F00C69A5C /* HomeViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkService.swift; sourceTree = "<group>"; };
 		8BD347502C7A880200E922DD /* CSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSError.swift; sourceTree = "<group>"; };
 		8BD347522C7A88A000E922DD /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				8BD347352C7A7EB000E922DD /* Persistence.swift */,
 				8BD347372C7A7EB000E922DD /* MoviesClub.xcdatamodeld */,
 				8BD347322C7A7EB000E922DD /* Preview Content */,
+				8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */,
 			);
 			path = MoviesClub;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				8BD347452C7A81F500E922DD /* MovieDetail.swift in Sources */,
 				8BD3474E2C7A869000E922DD /* GenericNetworkService.swift in Sources */,
 				8BD347392C7A7EB000E922DD /* MoviesClub.xcdatamodeld in Sources */,
+				8BEAEA552C7E040F00C69A5C /* HomeViewHandler.swift in Sources */,
 				8BD347512C7A880200E922DD /* CSError.swift in Sources */,
 				8BD347432C7A81D500E922DD /* Movie.swift in Sources */,
 				8BD347362C7A7EB000E922DD /* Persistence.swift in Sources */,
