@@ -27,6 +27,8 @@
 		8BEAEA672C7E139300C69A5C /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */; };
 		8BEAEA692C7E142500C69A5C /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA682C7E142500C69A5C /* DescriptionView.swift */; };
 		8BEAEA6B2C7E145800C69A5C /* SubTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA6A2C7E145800C69A5C /* SubTitleView.swift */; };
+		8BEAEA6D2C7E14D100C69A5C /* CastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA6C2C7E14D100C69A5C /* CastListItem.swift */; };
+		8BEAEA6F2C7E152D00C69A5C /* CastsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA6E2C7E152D00C69A5C /* CastsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeader.swift; sourceTree = "<group>"; };
 		8BEAEA682C7E142500C69A5C /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		8BEAEA6A2C7E145800C69A5C /* SubTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleView.swift; sourceTree = "<group>"; };
+		8BEAEA6C2C7E14D100C69A5C /* CastListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListItem.swift; sourceTree = "<group>"; };
+		8BEAEA6E2C7E152D00C69A5C /* CastsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */,
 				8BEAEA682C7E142500C69A5C /* DescriptionView.swift */,
 				8BEAEA6A2C7E145800C69A5C /* SubTitleView.swift */,
+				8BEAEA6C2C7E14D100C69A5C /* CastListItem.swift */,
+				8BEAEA6E2C7E152D00C69A5C /* CastsList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,7 +255,9 @@
 				8BD347472C7A821100E922DD /* Genre.swift in Sources */,
 				8BEAEA672C7E139300C69A5C /* DetailsHeader.swift in Sources */,
 				8BEAEA692C7E142500C69A5C /* DescriptionView.swift in Sources */,
+				8BEAEA6F2C7E152D00C69A5C /* CastsList.swift in Sources */,
 				8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */,
+				8BEAEA6D2C7E14D100C69A5C /* CastListItem.swift in Sources */,
 				8BD3474A2C7A842400E922DD /* MovieEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
