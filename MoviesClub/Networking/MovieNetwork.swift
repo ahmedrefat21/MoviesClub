@@ -13,42 +13,44 @@ class MovieNetwork {
   
     
     func fetchPopularList() async throws -> Movies {
-        let url = MovieURL.popularListUrl
+        guard let url = MovieURL.popularListUrl else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchTopRatedList() async throws -> Movies {
-        let url = MovieURL.topRatedListUrl
+        guard let url = MovieURL.topRatedListUrl else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchUpcomingList() async throws -> Movies {
-        let url = MovieURL.upcomingListUrl
+        guard let url = MovieURL.upcomingListUrl else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchNowPlayingList() async throws -> Movies {
-        let url = MovieURL.nowPlayinListUrl
+        
+        guard let url = MovieURL.nowPlayinListUrl else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchWithGenreMovies(with genreId: Int) async throws -> Movies {
-        let url = MovieURL.moviesWithGenreUrl(withGenre: "\(genreId)")
+        guard let url = MovieURL.moviesWithGenreUrl(withGenre: "\(genreId)") else { 
+            throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchMovieSearch(query: String) async throws -> Movies {
-        let url = MovieURL.movieSearchUrl(withQuery: query)
+        guard let url = MovieURL.movieSearchUrl(withQuery: query) else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchMovieDetail(withId movieId: Int) async throws -> MovieDetail {
-        let url = MovieURL.movieDetailUrl(withId: "\(movieId)")
+        guard let url = MovieURL.movieDetailUrl(withId: "\(movieId)") else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
     func fetchSimilarList(withId movieId: Int) async throws -> Movies {
-        let url = MovieURL.similar(withId: "\(movieId)")
+        guard let url = MovieURL.similar(withId: "\(movieId)") else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
 
