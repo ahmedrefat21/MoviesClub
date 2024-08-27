@@ -43,19 +43,19 @@ struct MovieURL {
     
     
     static var movieGenreListUrl: URL {
-        return movieURL(endpoint: .MovieGenreList, parameters: nil)
+        return movieURL(endpoint: .movieGenreList, parameters: nil)
     }
     
     static var popularListUrl: URL {
-        return movieURL(endpoint: .Popular, parameters: nil)
+        return movieURL(endpoint: .popular, parameters: nil)
     }
     
     static var topRatedListUrl: URL {
-        return movieURL(endpoint: .TopRated, parameters: nil)
+        return movieURL(endpoint: .topRated, parameters: nil)
     }
     
     static var upcomingListUrl: URL {
-        return movieURL(endpoint: .Upcoming, parameters: nil)
+        return movieURL(endpoint: .upcoming, parameters: nil)
     }
     
     static var nowPlayinListUrl: URL {
@@ -63,7 +63,7 @@ struct MovieURL {
     }
     
     static func moviesWithGenreUrl(withGenre genre:String) -> URL {
-        return movieURL(endpoint: .MovieWithGenre, parameters: ["with_genres" : genre])
+        return movieURL(endpoint: .movieWithGenre, parameters: ["with_genres" : genre])
     }
     
     static func movieSearchUrl(withQuery query:String) -> URL {
@@ -71,15 +71,15 @@ struct MovieURL {
     }
     
     static func movieDetailUrl(withId movieId:String) -> URL {
-        return movieURL(endpoint: .Details(movieId: movieId), parameters: nil)
+        return movieURL(endpoint: .details(movieId: movieId), parameters: nil)
     }
     
     static func creditsUrl(withId movieId:String) -> URL {
-        return movieURL(endpoint: .Credits(movieId: movieId), parameters: nil)
+        return movieURL(endpoint: .credits(movieId: movieId), parameters: nil)
     }
     
     static func similar(withId movieId: String) -> URL {
-        return movieURL(endpoint: .Similar(movieId: movieId), parameters: nil)
+        return movieURL(endpoint: .similar(movieId: movieId), parameters: nil)
     }
     
     

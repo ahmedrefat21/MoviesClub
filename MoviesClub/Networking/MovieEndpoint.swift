@@ -10,29 +10,29 @@ import Foundation
 
 enum MovieEndpoint {
     
-    case MovieGenreList
-    case Popular
-    case TopRated
-    case Upcoming
+    case movieGenreList
+    case popular
+    case topRated
+    case upcoming
     case nowPlaying
-    case MovieWithGenre
+    case movieWithGenre
     case searchMovie
-    case Details(movieId: String)
-    case Credits(movieId: String)
-    case Similar(movieId: String)
+    case details(movieId: String)
+    case credits(movieId: String)
+    case similar(movieId: String)
     
     var rawValue: String {
         switch self {
-        case .MovieGenreList: return "genre/movie/list"
-        case .Popular: return "movie/popular"
-        case .TopRated: return "movie/top_rated"
-        case .Upcoming: return "movie/upcoming"
+        case .movieGenreList: return "genre/movie/list"
+        case .popular: return "movie/popular"
+        case .topRated: return "movie/top_rated"
+        case .upcoming: return "movie/upcoming"
         case .nowPlaying: return "movie/now_playing"
-        case .MovieWithGenre: return "discover/movie"
+        case .movieWithGenre: return "discover/movie"
         case .searchMovie: return "search/movie"
-        case .Details(let movieId): return "movie/\(movieId)"
-        case .Credits(let movieId): return "movie/\(movieId)/credits"//Cast
-        case .Similar(let movieId): return "movie/\(movieId)/similar"
+        case .details(let movieId): return "movie/\(movieId)"
+        case .credits(let movieId): return "movie/\(movieId)/credits"//Cast
+        case .similar(let movieId): return "movie/\(movieId)/similar"
         }
     }
 }
