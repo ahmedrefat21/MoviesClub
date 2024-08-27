@@ -12,31 +12,26 @@ struct HomeView: View {
     var body: some View {
         
         VStack(spacing:20){
-            // MARK: - NavigationBar
-            NavigationBarView()
-                .padding(.top, 50)
-                .background(BackgroundStyle
-                    .navigationBackground)
-                .clipShape(.rect(cornerRadius: 25))
-                .shadow(color: .black.opacity(0.085), radius: 5, x: 0, y: 10)
-            
+        
+            homeHeader
             ScrollView(.vertical,showsIndicators: false){
                 
                 // MARK: - TopRatedList
-                MovieSection(title: "Top Rated Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .topRated)
-                 
+                TopRatedList(movies:  [Constants().sampleMovie, Constants().sampleMovie])
+                
                 // MARK: - NowPlayingList
-                MovieSection(title: "Now Playing Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .nowPlaying)
+                NowPlayingList(movies: [Constants().sampleMovie, Constants().sampleMovie])
                  
                 // MARK: - PopularList
-                MovieSection(title: "Popular Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .standart)
+                StandardList(title: "Popular Movies", movies: [Constants().sampleMovie, Constants().sampleMovie])
+            
                 // MARK: - UpcomingList
-                MovieSection(title: "Upcoming Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .standart)
+                StandardList(title: "Upcoming Movies", movies: [Constants().sampleMovie, Constants().sampleMovie])
+                
             }
         }
-                
+        
         .background(BackgroundStyle.background)
-        .ignoresSafeArea(.all,edges: .top)
     }
 }
 
@@ -44,19 +39,22 @@ struct HomeView: View {
     HomeView()
 }
 
-// MARK: - MovieSection
-struct MovieSection: View {
-    var title: String
-        var movies: [Movie]
-        var listType: MovieListType
-    var body: some View {
-        VStack (alignment: .leading){
-            TitleView(title: title)
-                .padding(.leading,10)
-            
-            MovieList(movies: movies, listType: listType)
-        }
-        .padding(.bottom,20)
+// MARK: - HomeHeader
+private var homeHeader: some View {
+    HStack {
+        Spacer()
+        Image("logo")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 40,height:40,alignment: .center)
+        Text("Movies club")
+            .font(.titleMedium)
+            .fontWeight(.black)
+            .foregroundStyle(Color.textBase)
+            .shadow(color: .black, radius: 2)
+        Spacer()
     }
 }
+
+
 
