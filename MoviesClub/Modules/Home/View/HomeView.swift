@@ -23,15 +23,15 @@ struct HomeView: View {
             ScrollView(.vertical,showsIndicators: false){
                 
                 // MARK: - TopRatedList
-                MovieSection(title: "Top Rated Movies", movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .topRated)
+                MovieSection(title: "Top Rated Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .topRated)
                  
                 // MARK: - NowPlayingList
-                MovieSection(title: "Now Playing Movies", movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .nowPlaying)
+                MovieSection(title: "Now Playing Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .nowPlaying)
                  
                 // MARK: - PopularList
-                MovieSection(title: "Popular Movies", movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .standart)
+                MovieSection(title: "Popular Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .standart)
                 // MARK: - UpcomingList
-                MovieSection(title: "Upcoming Movies", movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .standart)
+                MovieSection(title: "Upcoming Movies", movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .standart)
             }
         }
                 

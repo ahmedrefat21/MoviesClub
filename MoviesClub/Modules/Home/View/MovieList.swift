@@ -25,14 +25,14 @@ struct MovieList: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
-                ForEach(movies.indices, id: \.self) { indeks in
+                ForEach(movies.indices, id: \.self) { index in
                     switch listType {
                     case .standart:
-                        StandardListItem(movie: movies[indeks])
+                        StandardListItem(movie: movies[index])
                     case .nowPlaying:
-                        NowPlayingListItem(movie: movies[indeks])
+                        NowPlayingListItem(movie: movies[index])
                     case .topRated:
-                        TopRatedListItem(movie: movies[indeks], number: indeks + 1)
+                        TopRatedListItem(movie: movies[index], number: index + 1)
                     }
                 }
             }
@@ -41,7 +41,7 @@ struct MovieList: View {
 }
 
 #Preview {
-    MovieList(movies: [Constants.sampleMovie, Constants.sampleMovie], listType: .standart)
+    MovieList(movies: [Constants().sampleMovie, Constants().sampleMovie], listType: .standart)
 }
 
 

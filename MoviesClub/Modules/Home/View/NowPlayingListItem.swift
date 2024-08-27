@@ -13,7 +13,7 @@ struct NowPlayingListItem: View {
     //MARK: - BODY
     var body: some View {
         HStack(spacing:15) {
-            if let imagePath = movie.backdrop_path,let title = movie.title,let voteAverage = movie.vote_average,let releaseDate = movie.release_date{
+            if let imagePath = movie.backdropPath,let title = movie.title,let voteAverage = movie.voteAverage,let releaseDate = movie.releaseDate{
                 CustomImageView(imagePath: imagePath)
                     .scaledToFit()
                     .frame(width: 175,height: 100)
@@ -60,5 +60,5 @@ struct NowPlayingListItem: View {
 }
 
 #Preview {
-    NowPlayingListItem(movie: Constants.sampleMovie)
+    NowPlayingListItem(movie: Constants().sampleMovie)
 }

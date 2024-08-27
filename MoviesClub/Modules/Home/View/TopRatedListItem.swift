@@ -16,7 +16,7 @@ struct TopRatedListItem: View {
     var body: some View {
         ZStack {
             //MARK: - MovieImage
-            if let imagePath = movie.poster_path{
+            if let imagePath = movie.posterPath{
                 CustomImageView(imagePath: imagePath)
                     .scaledToFit()
                     .frame(width: 140,height: 210)
@@ -27,7 +27,6 @@ struct TopRatedListItem: View {
                     width: 0.75,
                     color: .textStroke)
                 .font(.titleVeryLarge)
-                .fontWeight(.bold)
                 .imageScale(.large)
                 .offset(x:-60,y:90)
                 .foregroundStyle(Color.backgroundDark)
@@ -40,7 +39,7 @@ struct TopRatedListItem: View {
 }
 
 #Preview {
-    TopRatedListItem(movie: Constants.sampleMovie, number: 1)
+    TopRatedListItem(movie: Constants().sampleMovie, number: 2)
 }
 
 
