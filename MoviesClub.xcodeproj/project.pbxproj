@@ -24,6 +24,7 @@
 		8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347522C7A88A000E922DD /* MovieNetwork.swift */; };
 		8BEAEA632C7E126400C69A5C /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA622C7E126400C69A5C /* PosterView.swift */; };
 		8BEAEA652C7E12EE00C69A5C /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA642C7E12EE00C69A5C /* RateView.swift */; };
+		8BEAEA672C7E139300C69A5C /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		8BD347522C7A88A000E922DD /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
 		8BEAEA622C7E126400C69A5C /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		8BEAEA642C7E12EE00C69A5C /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
+		8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				8BEAEA622C7E126400C69A5C /* PosterView.swift */,
 				8BEAEA642C7E12EE00C69A5C /* RateView.swift */,
+				8BEAEA662C7E139300C69A5C /* DetailsHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */,
 				8BEAEA652C7E12EE00C69A5C /* RateView.swift in Sources */,
 				8BD347472C7A821100E922DD /* Genre.swift in Sources */,
+				8BEAEA672C7E139300C69A5C /* DetailsHeader.swift in Sources */,
 				8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */,
 				8BD3474A2C7A842400E922DD /* MovieEndpoint.swift in Sources */,
 			);
