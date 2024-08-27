@@ -14,6 +14,7 @@ extension HomeView {
         //MARK: - PROPERTIES
         
         @Published var topRatedMovies: [Movie] = []
+        @Published var nowPlayingMovies: [Movie] = []
         
         
         private var movieNetwork = MovieNetwork()
@@ -31,6 +32,16 @@ extension HomeView {
             do {
                 let movies = try await movieNetwork.fetchTopRatedList()
                 topRatedMovies = movies.results
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        //MARK: - getNowPlayingMovies
+        func getNowPlayingMovies() async {
+            do {
+                let movies = try await movieNetwork.fetchNowPlayingList()
+                nowPlayingMovies = movies.results
             } catch {
                 print(error.localizedDescription)
             }
