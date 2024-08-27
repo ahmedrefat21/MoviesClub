@@ -54,5 +54,9 @@ class MovieNetwork {
         return try await GenericNetworkService.getData(from: url)
     }
 
+    func fetchCastList(withId movieId: Int) async throws -> Credit {
+        guard let url = MovieURL.creditsUrl(withId: "\(movieId)") else { throw CSError.invalidURL }
+        return try await GenericNetworkService.getData(from: url)
+    }
     
 }

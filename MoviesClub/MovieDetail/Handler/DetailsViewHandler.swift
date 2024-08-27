@@ -16,7 +16,7 @@ extension DetailView {
         //MARK: - PROPERTIES
         @Published var movieDetail: MovieDetail?
         @Published var similarMovies: [Movie] = []
-        
+        @Published var casts: [Casts] = []
         
         private var movieNetwork = MovieNetwork()
         
@@ -44,7 +44,15 @@ extension DetailView {
             }
         }
         
-        
+        //MARK: - getCasts
+        func getCasts(withId movieId: Int) async {
+            do {
+                let castList = try await movieNetwork.fetchCastList(withId: movieId)
+                casts = castList.cast
+            } catch {
+                handleError(error)
+            }
+        }
         
         // MARK: - Error Handling
         private func handleError(_ error: Error) {
