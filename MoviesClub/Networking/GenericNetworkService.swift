@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import os
+
+
 
 struct GenericNetworkService {
     
     private static let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
+    private static let logger = Logger(subsystem: "com.MoviesClub.networking", category: "network")
     
     
     static func getData<T: Decodable>(from url: URL) async throws -> T {
@@ -19,7 +23,7 @@ struct GenericNetworkService {
             let (data, response) = try await session.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Error in response")
+                logger.error("Invalid response from server for URL: \(url.absoluteString)")
                 throw CSError.invailedResponse
             }
             
@@ -28,13 +32,13 @@ struct GenericNetworkService {
             
         } catch {
             if let urlError = error as? URLError {
-                print(urlError.localizedDescription)
+                logger.error("URL error: \(urlError.localizedDescription) for URL: \(url.absoluteString)")
                 throw CSError.unableToComplete
             } else if let decodingError = error as? DecodingError {
-                print("Decoding error: \(decodingError.localizedDescription)")
+                logger.error("Decoding error: \(decodingError.localizedDescription) for URL: \(url.absoluteString)")
                 throw CSError.invailedData
             } else {
-                print("Unknown error: \(error.localizedDescription)")
+                logger.error("Unknown error: \(error.localizedDescription) for URL: \(url.absoluteString)")
                 throw CSError.unableToComplete
             }
         }
