@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775EA7592C7F8873003E3B39 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775EA7582C7F8873003E3B39 /* UINavigationController.swift */; };
 		77CF58762C7F3846001F6C2E /* HomeViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */; };
 		8B136A282C7F44D30080403E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B136A272C7F44D30080403E /* ErrorView.swift */; };
 		8B136A332C7F62D20080403E /* CastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B136A292C7F62D20080403E /* CastListItem.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		775EA7582C7F8873003E3B39 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewHandler.swift; path = MoviesClub/Modules/Handler/HomeViewHandler.swift; sourceTree = SOURCE_ROOT; };
 		8B136A272C7F44D30080403E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8B136A292C7F62D20080403E /* CastListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastListItem.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				8BCA1A322C7C789700AD6B6F /* Font.swift */,
 				8BCA1A342C7C78B100AD6B6F /* Color.swift */,
 				8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */,
+				775EA7582C7F8873003E3B39 /* UINavigationController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				8BCA1A472C7C7F0000AD6B6F /* StandardListItem.swift in Sources */,
 				8BCA1A392C7C797F00AD6B6F /* CustomImageView.swift in Sources */,
 				8BCA1A372C7C78DA00AD6B6F /* BackgroundStyle.swift in Sources */,
+				775EA7592C7F8873003E3B39 /* UINavigationController.swift in Sources */,
 				8BCA1A3B2C7C7A7300AD6B6F /* TopRatedListItem.swift in Sources */,
 				8B136A362C7F62D20080403E /* DetailsHeader.swift in Sources */,
 				8BCA1A432C7C7C3700AD6B6F /* DoubleFormatter.swift in Sources */,
