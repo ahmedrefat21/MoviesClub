@@ -14,7 +14,7 @@ extension HomeView {
     class HomeViewHandler: ObservableObject {
         //MARK: - PROPERTIES
         
-        private static let logger = Logger(subsystem: "com.MoviesClub.networking", category: "HomeViewHandler")
+        private let logger = Logger(subsystem: "com.MoviesClub.networking", category: "HomeViewHandler")
         
         @Published var topRatedMovies: [Movie] = []
         @Published var nowPlayingMovies: [Movie] = []
@@ -83,8 +83,8 @@ extension HomeView {
         // MARK: - Error Handling
                 
         private func handleError(_ error: Error) {
-            errorMessage = error.localizedDescription
-            logger.error("Error fetching data: \(error)")
+            let errorMessage = error.localizedDescription
+            logger.error("Error fetching data: \(errorMessage)")
         }
     }
 }

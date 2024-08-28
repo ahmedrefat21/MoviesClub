@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject private var handler: HomeViewHandler = .init()
     // MARK: - BODY
     var body: some View {
         
@@ -17,16 +19,16 @@ struct HomeView: View {
             ScrollView(.vertical,showsIndicators: false){
                 
                 // MARK: - TopRatedList
-                TopRatedList(movies:  [Constants().sampleMovie, Constants().sampleMovie])
+                TopRatedList(movies:  handler.topRatedMovies)
                 
                 // MARK: - NowPlayingList
-                NowPlayingList(movies: [Constants().sampleMovie, Constants().sampleMovie])
+                NowPlayingList(movies: handler.nowPlayingMovies)
                  
                 // MARK: - PopularList
-                StandardList(title: "Popular Movies", movies: [Constants().sampleMovie, Constants().sampleMovie])
+                StandardList(title: "Popular Movies", movies: handler.popularMovies)
             
                 // MARK: - UpcomingList
-                StandardList(title: "Upcoming Movies", movies: [Constants().sampleMovie, Constants().sampleMovie])
+                StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies)
                 
             }
         }
