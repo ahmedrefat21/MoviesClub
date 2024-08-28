@@ -11,7 +11,7 @@ import Foundation
 struct MovieURL {
     
     private static let baseMovieURLString = "https://api.themoviedb.org/3/"
-    private static let baseImageURLString = "https://image.tmdb.org/t/p/w500/"
+    static let baseImageURLString = "https://image.tmdb.org/t/p/w500/"
     private static let apiKey = "Your API Key"
     
 
