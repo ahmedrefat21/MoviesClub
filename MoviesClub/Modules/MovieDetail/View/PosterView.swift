@@ -9,12 +9,13 @@ import SwiftUI
 
 struct PosterView: View {
     //MARK: - PROPERTIES
-    var movieDetail: MovieDetail
+    var posterImage: String?
+    var voteRate: Double?
     
     // MARK: - BODY
     var body: some View {
         VStack{
-            if let imagePath = movieDetail.backdropPath,let voteRate = movieDetail.voteAverage{
+            if let imagePath = posterImage,let voteRate = voteRate{
                 CustomImageView(imagePath: imagePath)
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -31,7 +32,7 @@ struct PosterView: View {
 }
 
 #Preview {
-    PosterView(movieDetail: sampleMovieDetail)
+    PosterView(posterImage: "/qGJASuD3fs9ZBxuEZoxCLVidVq8.jpg", voteRate: 6.516)
 }
 
 
