@@ -17,8 +17,13 @@ struct DetailView: View {
     // MARK: - BODY
     var body: some View {
         VStack(spacing: 20) {
-            detailsBar
-            movieDetailContent
+            if let errorMessage = handler.errorMessage {
+                ErrorView(errorMessage: errorMessage)
+               
+            } else {
+                detailsBar
+                movieDetailContent
+            }
         }
         .background(BackgroundStyle.background)
         .onAppear(perform: loadData)
