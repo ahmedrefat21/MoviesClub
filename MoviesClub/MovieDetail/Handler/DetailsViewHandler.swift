@@ -7,13 +7,15 @@
 
 import Foundation
 import Combine
+import os
 
-extension DetailView {
+//extension DetailView {
     @MainActor
     class DetailsViewHandler: ObservableObject {
         
         
         //MARK: - PROPERTIES
+        private let logger = Logger(subsystem: "com.MoviesClub.networking", category: "DetailsViewHandler")
         @Published var movieDetail: MovieDetail?
         @Published var similarMovies: [Movie] = []
         @Published var casts: [Casts] = []
@@ -56,11 +58,12 @@ extension DetailView {
         
         // MARK: - Error Handling
         private func handleError(_ error: Error) {
-            errorMessage =
-            error.localizedDescription
-            logger.error("Error fetching data: \(error)")
+            let errorMessage = error.localizedDescription
+            logger.error("Error fetching data: \(errorMessage)")
         }
+        
+        
     }
-}
+//}
 
 
