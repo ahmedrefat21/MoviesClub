@@ -15,11 +15,11 @@ struct DescriptionView: View {
     // MARK: - BODY
     var body: some View {
         VStack(alignment: .leading,spacing: 5){
-            SubTitleView(title: "Overview")
+            TitleView(title: "Overview", font: .titleMedium, addShadow: false)
             if let overview = movie.overview{
                 DescriptionContentView(descriptionText: overview)
             }
-            SubTitleView(title: "Tagline")
+            TitleView(title: "Tagline", font: .titleMedium, addShadow: false)
             
             if let tagline = movie.tagline{
                 DescriptionContentView(descriptionText: tagline)

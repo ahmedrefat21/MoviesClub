@@ -14,7 +14,7 @@ struct CastsList: View {
     // MARK: - BODY
     var body: some View {
         VStack (alignment: .leading){
-            SubTitleView(title: "Cast")
+            TitleView(title: "Cast", font: .titleMedium, addShadow: false)
                 .padding(.leading,10)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {

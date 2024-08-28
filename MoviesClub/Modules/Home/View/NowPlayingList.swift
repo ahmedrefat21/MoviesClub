@@ -11,7 +11,7 @@ struct NowPlayingList: View {
     var movies: [Movie]
     var body: some View {
         VStack (alignment: .leading){
-            TitleView(title: "Now Playing Movies")
+            TitleView(title: "Now Playing Movies", font: .titleLarge, addShadow: true)
                 .padding(.leading,10)
             
             ScrollView(.horizontal, showsIndicators: false) {

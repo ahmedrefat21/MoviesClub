@@ -10,9 +10,11 @@ import SwiftUI
 struct StandardList: View {
     var title: String
     var movies: [Movie]
+    var font : Font
     var body: some View {
         VStack (alignment: .leading){
-            TitleView(title: title)
+            TitleView(title: title, font: font, addShadow: true)
+            
                 .padding(.leading,10)
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -30,5 +32,5 @@ struct StandardList: View {
 }
 
 #Preview {
-    StandardList(title: "Popular Movies", movies:  [Constants().sampleMovie, Constants().sampleMovie])
+    StandardList(title: "Popular Movies", movies:  [Constants().sampleMovie, Constants().sampleMovie],font: .titleLarge)
 }

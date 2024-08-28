@@ -31,10 +31,10 @@ struct HomeView: View {
                         NowPlayingList(movies: handler.nowPlayingMovies)
                         
                         // MARK: - PopularList
-                        StandardList(title: "Popular Movies", movies: handler.popularMovies)
+                        StandardList(title: "Popular Movies", movies: handler.popularMovies,font: .titleLarge)
                         
                         // MARK: - UpcomingList
-                        StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies)
+                        StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies ,font: .titleLarge)
                     }
                     
                     

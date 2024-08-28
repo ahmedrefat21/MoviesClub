@@ -29,7 +29,7 @@ struct DetailView: View {
                         DescriptionView(movie: movieDetail)
                             .padding(.top, 140)
                         CastsList(casts: handler.casts)
-                        SimilarMoviesList(movies: handler.similarMovies)
+                        StandardList(title: "Similar Movies", movies: handler.similarMovies ,font: .titleMedium)
                     }
                 }
             
