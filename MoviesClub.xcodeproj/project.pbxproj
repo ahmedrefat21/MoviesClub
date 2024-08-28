@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77CF58762C7F3846001F6C2E /* HomeViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */; };
 		8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A322C7C789700AD6B6F /* Font.swift */; };
 		8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A342C7C78B100AD6B6F /* Color.swift */; };
 		8BCA1A372C7C78DA00AD6B6F /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */; };
@@ -34,13 +35,13 @@
 		8BD3474E2C7A869000E922DD /* GenericNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */; };
 		8BD347512C7A880200E922DD /* CSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347502C7A880200E922DD /* CSError.swift */; };
 		8BD347532C7A88A000E922DD /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD347522C7A88A000E922DD /* MovieNetwork.swift */; };
-		8BEAEA552C7E040F00C69A5C /* HomeViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */; };
 		8BEAEA712C7E1B4400C69A5C /* TopRatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA702C7E1B4400C69A5C /* TopRatedList.swift */; };
 		8BEAEA732C7E20A100C69A5C /* NowPlayingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA722C7E20A100C69A5C /* NowPlayingList.swift */; };
 		8BEAEA752C7E214F00C69A5C /* StandardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEAEA742C7E214E00C69A5C /* StandardList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewHandler.swift; path = MoviesClub/Modules/Handler/HomeViewHandler.swift; sourceTree = SOURCE_ROOT; };
 		8BCA1A322C7C789700AD6B6F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8BCA1A342C7C78B100AD6B6F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		8BD3474D2C7A869000E922DD /* GenericNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkService.swift; sourceTree = "<group>"; };
 		8BD347502C7A880200E922DD /* CSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSError.swift; sourceTree = "<group>"; };
 		8BD347522C7A88A000E922DD /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
-		8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewHandler.swift; sourceTree = "<group>"; };
 		8BEAEA702C7E1B4400C69A5C /* TopRatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedList.swift; sourceTree = "<group>"; };
 		8BEAEA722C7E20A100C69A5C /* NowPlayingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingList.swift; sourceTree = "<group>"; };
 		8BEAEA742C7E214E00C69A5C /* StandardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardList.swift; sourceTree = "<group>"; };
@@ -86,19 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77CF58722C7F37FC001F6C2E /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		8BCA1A282C7C76FD00AD6B6F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				8BCA1A4F2C7C82EB00AD6B6F /* Home */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		8BCA1A292C7C770F00AD6B6F /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Handler;
 			sourceTree = "<group>";
 		};
 		8BCA1A2A2C7C772000AD6B6F /* View */ = {
@@ -130,7 +131,7 @@
 		8BCA1A4F2C7C82EB00AD6B6F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8BCA1A292C7C770F00AD6B6F /* Handler */,
+				77CF58722C7F37FC001F6C2E /* Handler */,
 				8BCA1A2A2C7C772000AD6B6F /* View */,
 			);
 			path = Home;
@@ -166,7 +167,6 @@
 				8BD347352C7A7EB000E922DD /* Persistence.swift */,
 				8BD347372C7A7EB000E922DD /* MoviesClub.xcdatamodeld */,
 				8BD347322C7A7EB000E922DD /* Preview Content */,
-				8BEAEA542C7E040F00C69A5C /* HomeViewHandler.swift */,
 			);
 			path = MoviesClub;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				8BD3474E2C7A869000E922DD /* GenericNetworkService.swift in Sources */,
 				8BEAEA732C7E20A100C69A5C /* NowPlayingList.swift in Sources */,
 				8BD347392C7A7EB000E922DD /* MoviesClub.xcdatamodeld in Sources */,
-				8BEAEA552C7E040F00C69A5C /* HomeViewHandler.swift in Sources */,
+				77CF58762C7F3846001F6C2E /* HomeViewHandler.swift in Sources */,
 				8BEAEA712C7E1B4400C69A5C /* TopRatedList.swift in Sources */,
 				8BCA1A412C7C7BC100AD6B6F /* NowPlayingListItem.swift in Sources */,
 				8BCA1A472C7C7F0000AD6B6F /* StandardListItem.swift in Sources */,
@@ -452,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesClub/Preview Content\"";
+				DEVELOPMENT_TEAM = U98MB87JNM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesClub/Preview Content\"";
+				DEVELOPMENT_TEAM = U98MB87JNM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
