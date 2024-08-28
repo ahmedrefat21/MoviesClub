@@ -10,15 +10,19 @@ import SwiftUI
 struct StandardList: View {
     var title: String
     var movies: [Movie]
+    var font : Font
     var body: some View {
         VStack (alignment: .leading){
-            TitleView(title: title)
+            TitleView(title: title, font: font, addShadow: true)
+            
                 .padding(.leading,10)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        StandardListItem(movie: movies[index])
+                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                            StandardListItem(movie: movies[index])
+                        }
                     }
                 }
             }
@@ -28,5 +32,5 @@ struct StandardList: View {
 }
 
 #Preview {
-    StandardList(title: "Popular Movies", movies:  [Constants().sampleMovie, Constants().sampleMovie])
+    StandardList(title: "Popular Movies", movies:  [Constants().sampleMovie, Constants().sampleMovie],font: .titleLarge)
 }

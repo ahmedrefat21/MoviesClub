@@ -11,13 +11,15 @@ struct NowPlayingList: View {
     var movies: [Movie]
     var body: some View {
         VStack (alignment: .leading){
-            TitleView(title: "Now Playing Movies")
+            TitleView(title: "Now Playing Movies", font: .titleLarge, addShadow: true)
                 .padding(.leading,10)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        NowPlayingListItem(movie: movies[index])
+                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                            NowPlayingListItem(movie: movies[index])
+                        }
                     }
                 }
             }

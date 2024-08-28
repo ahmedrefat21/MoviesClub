@@ -23,7 +23,7 @@ struct CustomImageView: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                 case .failure:
                     Image(systemName: "photo")
                         .resizable()

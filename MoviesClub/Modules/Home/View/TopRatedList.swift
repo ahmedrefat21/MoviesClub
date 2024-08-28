@@ -12,13 +12,15 @@ struct TopRatedList: View {
     var movies: [Movie]
     var body: some View {
         VStack (alignment: .leading){
-            TitleView(title: "Top Rated Movies")
+            TitleView(title: "Top Rated Movies", font: .titleLarge, addShadow: true)
                 .padding(.leading,10)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        TopRatedListItem(movie: movies[index], number: index + 1)
+                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                            TopRatedListItem(movie: movies[index], number: index + 1)
+                        }
                     }
                 }
             }

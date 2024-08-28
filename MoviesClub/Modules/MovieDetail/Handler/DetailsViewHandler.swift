@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-//extension DetailView {
+extension DetailView {
     @MainActor
     class DetailsViewHandler: ObservableObject {
         
@@ -19,6 +19,7 @@ import os
         @Published var movieDetail: MovieDetail?
         @Published var similarMovies: [Movie] = []
         @Published var casts: [Casts] = []
+        @Published var errorMessage: String?
         
         private var movieNetwork = MovieNetwork()
         
@@ -60,10 +61,11 @@ import os
         private func handleError(_ error: Error) {
             let errorMessage = error.localizedDescription
             logger.error("Error fetching data: \(errorMessage)")
+            self.errorMessage = errorMessage
         }
         
         
     }
-//}
+}
 
 

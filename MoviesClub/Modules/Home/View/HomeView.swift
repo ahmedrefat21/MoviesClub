@@ -13,34 +13,36 @@ struct HomeView: View {
     // MARK: - BODY
     var body: some View {
         
-        VStack(spacing:20){
-        
-            homeHeader
-            ScrollView(.vertical,showsIndicators: false){
-                // MARK: - ErrorView
-                if let errorMessage = handler.errorMessage {
-                    ErrorView(errorMessage: errorMessage)
-                   
-                } else {
+        NavigationView {
+            VStack(spacing:20){
+            
+                homeHeader
+                ScrollView(.vertical,showsIndicators: false){
+                    // MARK: - ErrorView
+                    if let errorMessage = handler.errorMessage {
+                        ErrorView(errorMessage: errorMessage)
+                       
+                    } else {
+                        
+                        // MARK: - TopRatedList
+                        TopRatedList(movies:  handler.topRatedMovies)
+                        
+                        // MARK: - NowPlayingList
+                        NowPlayingList(movies: handler.nowPlayingMovies)
+                        
+                        // MARK: - PopularList
+                        StandardList(title: "Popular Movies", movies: handler.popularMovies,font: .titleLarge)
+                        
+                        // MARK: - UpcomingList
+                        StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies ,font: .titleLarge)
+                    }
                     
-                    // MARK: - TopRatedList
-                    TopRatedList(movies:  handler.topRatedMovies)
                     
-                    // MARK: - NowPlayingList
-                    NowPlayingList(movies: handler.nowPlayingMovies)
-                    
-                    // MARK: - PopularList
-                    StandardList(title: "Popular Movies", movies: handler.popularMovies)
-                    
-                    // MARK: - UpcomingList
-                    StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies)
                 }
-                
-                
             }
+            
+            .background(BackgroundStyle.background)
         }
-        
-        .background(BackgroundStyle.background)
     }
 }
 
