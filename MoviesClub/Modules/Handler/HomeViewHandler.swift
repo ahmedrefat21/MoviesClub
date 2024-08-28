@@ -20,6 +20,8 @@ extension HomeView {
         @Published var nowPlayingMovies: [Movie] = []
         @Published var popularMovies: [Movie] = []
         @Published var upcomingMovies: [Movie] = []
+        @Published var errorMessage: String?
+        
         
         private var movieNetwork = MovieNetwork()
         
@@ -85,6 +87,8 @@ extension HomeView {
         private func handleError(_ error: Error) {
             let errorMessage = error.localizedDescription
             logger.error("Error fetching data: \(errorMessage)")
+            self.errorMessage = errorMessage
+            
         }
     }
 }

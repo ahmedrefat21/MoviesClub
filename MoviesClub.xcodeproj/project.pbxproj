@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77CF58762C7F3846001F6C2E /* HomeViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */; };
+		8B136A282C7F44D30080403E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B136A272C7F44D30080403E /* ErrorView.swift */; };
 		8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A322C7C789700AD6B6F /* Font.swift */; };
 		8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A342C7C78B100AD6B6F /* Color.swift */; };
 		8BCA1A372C7C78DA00AD6B6F /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		77CF58752C7F3846001F6C2E /* HomeViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewHandler.swift; path = MoviesClub/Modules/Handler/HomeViewHandler.swift; sourceTree = SOURCE_ROOT; };
+		8B136A272C7F44D30080403E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8BCA1A322C7C789700AD6B6F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8BCA1A342C7C78B100AD6B6F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCA1A382C7C797F00AD6B6F /* CustomImageView.swift */,
+				8B136A272C7F44D30080403E /* ErrorView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				8BD347432C7A81D500E922DD /* Movie.swift in Sources */,
 				8BD347362C7A7EB000E922DD /* Persistence.swift in Sources */,
 				8BCA1A4D2C7C814E00AD6B6F /* HomeView.swift in Sources */,
+				8B136A282C7F44D30080403E /* ErrorView.swift in Sources */,
 				8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */,
 				8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */,
 				8BD3472F2C7A7EAD00E922DD /* ContentView.swift in Sources */,
