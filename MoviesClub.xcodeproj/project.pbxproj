@@ -140,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCA1A4F2C7C82EB00AD6B6F /* Home */,
+				8BEAEA572C7E085D00C69A5C /* MovieDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -198,7 +199,6 @@
 		8BD3472B2C7A7EAD00E922DD /* MoviesClub */ = {
 			isa = PBXGroup;
 			children = (
-				8BEAEA572C7E085D00C69A5C /* MovieDetail */,
 				8BCA1A312C7C783F00AD6B6F /* Extension */,
 				8BCA1A282C7C76FD00AD6B6F /* Modules */,
 				8BD3474F2C7A87E000E922DD /* Utilities */,
@@ -260,8 +260,8 @@
 		8BEAEA572C7E085D00C69A5C /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
-				8B136A322C7F62D20080403E /* View */,
 				8BEAEA582C7E087000C69A5C /* Handler */,
+				8B136A322C7F62D20080403E /* View */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";

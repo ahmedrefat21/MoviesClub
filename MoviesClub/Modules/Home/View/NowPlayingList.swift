@@ -17,7 +17,9 @@ struct NowPlayingList: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        NowPlayingListItem(movie: movies[index])
+                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                            NowPlayingListItem(movie: movies[index])
+                        }
                     }
                 }
             }

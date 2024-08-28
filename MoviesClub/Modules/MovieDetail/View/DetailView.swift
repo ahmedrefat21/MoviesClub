@@ -27,6 +27,7 @@ struct DetailView: View {
         }
         .background(BackgroundStyle.background)
         .onAppear(perform: loadData)
+        .navigationBarHidden(true)
     }
     
     // MARK: - COMPONENTS

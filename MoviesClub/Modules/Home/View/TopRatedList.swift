@@ -18,7 +18,9 @@ struct TopRatedList: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        TopRatedListItem(movie: movies[index], number: index + 1)
+                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                            TopRatedListItem(movie: movies[index], number: index + 1)
+                        }
                     }
                 }
             }
