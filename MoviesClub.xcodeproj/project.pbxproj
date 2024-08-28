@@ -91,6 +91,7 @@
 		8BD3472B2C7A7EAD00E922DD /* MoviesClub */ = {
 			isa = PBXGroup;
 			children = (
+				8BEAEA5F2C7E120500C69A5C /* MovieDetail */,
 				8BD3474F2C7A87E000E922DD /* Utilities */,
 				8BD347482C7A83FD00E922DD /* Networking */,
 				8BD3473F2C7A816E00E922DD /* Model */,
@@ -99,7 +100,6 @@
 				8BD347302C7A7EAF00E922DD /* Assets.xcassets */,
 				8BD347352C7A7EB000E922DD /* Persistence.swift */,
 				8BD347372C7A7EB000E922DD /* MoviesClub.xcdatamodeld */,
-				8BEAEA602C7E121000C69A5C /* View */,
 				8BD347322C7A7EB000E922DD /* Preview Content */,
 			);
 			path = MoviesClub;
@@ -143,6 +143,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		8BEAEA5F2C7E120500C69A5C /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8BEAEA612C7E121800C69A5C /* Handler */,
+				8BEAEA602C7E121000C69A5C /* View */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
 		8BEAEA602C7E121000C69A5C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +166,13 @@
 				8BE1F4EA2C7E2A8700AA98E5 /* DetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8BEAEA612C7E121800C69A5C /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
