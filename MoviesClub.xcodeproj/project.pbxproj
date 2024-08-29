@@ -57,6 +57,7 @@
 		8BEF94EB2C806F6200C1954D /* SearchMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF94EA2C806F6200C1954D /* SearchMovieList.swift */; };
 		8BEF94ED2C8070C500C1954D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF94EC2C8070C500C1954D /* SearchView.swift */; };
 		8BEF94F02C808C1200C1954D /* SearchViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF94EF2C808C1200C1954D /* SearchViewHandler.swift */; };
+		8BEF94F22C809E3300C1954D /* CustomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF94F12C809E3300C1954D /* CustomBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		8BEF94EA2C806F6200C1954D /* SearchMovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieList.swift; sourceTree = "<group>"; };
 		8BEF94EC2C8070C500C1954D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		8BEF94EF2C808C1200C1954D /* SearchViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewHandler.swift; sourceTree = "<group>"; };
+		8BEF94F12C809E3300C1954D /* CustomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				8BCA1A4A2C7C811500AD6B6F /* TitleView.swift */,
 				8BCA1A382C7C797F00AD6B6F /* CustomImageView.swift */,
 				8B136A272C7F44D30080403E /* ErrorView.swift */,
+				8BEF94F12C809E3300C1954D /* CustomBarView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				8B136A362C7F62D20080403E /* DetailsHeader.swift in Sources */,
 				8BEF94ED2C8070C500C1954D /* SearchView.swift in Sources */,
 				8BCA1A432C7C7C3700AD6B6F /* DoubleFormatter.swift in Sources */,
+				8BEF94F22C809E3300C1954D /* CustomBarView.swift in Sources */,
 				8B136A392C7F62D20080403E /* RateView.swift in Sources */,
 				8BD347512C7A880200E922DD /* CSError.swift in Sources */,
 				8BD347432C7A81D500E922DD /* Movie.swift in Sources */,

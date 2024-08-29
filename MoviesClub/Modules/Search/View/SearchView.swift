@@ -11,15 +11,18 @@ struct SearchView: View {
     
     // MARK: - Properties
     @StateObject var handler: SearchViewHandler = .init()
+    @Environment(\.presentationMode) private var presentationMode
     @State private var searchTerm: String = ""
     @State private var isComplete: Bool = false
 
     // MARK: - BODY
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 0) {
+                //CustomBarView()
+                detailsBar
                 TitleView(title: "Search", font: .largeTitle, addShadow: true)
-                    .padding(.horizontal, 10)
+                    .padding(15)
 
                 customSearchTextField
 
@@ -38,8 +41,18 @@ struct SearchView: View {
             }
             .background(BackgroundStyle.background)
             
+            .overlay{
+                if let errorMessage = handler.errorMessage {
+                    VStack {
+                        ErrorView(errorMessage: errorMessage)
+                        Spacer()
+                    }
+                }
+            }
+            
             
         }
+        .navigationBarHidden(true)
     }
 
     // MARK: - SearchTextField
@@ -72,6 +85,28 @@ struct SearchView: View {
                     .padding(.horizontal, 25),
                 alignment: .trailing
             )
+    }
+    
+    // MARK: - COMPONENTS
+    private var detailsBar: some View {
+        HStack {
+            backButton
+            Spacer()
+        }
+        .padding(.horizontal, 15)
+    }
+    
+    private var backButton: some View {
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.backward")
+                    .foregroundStyle(Color.textBase)
+                    .font(.titleLarge)
+
+            }
+        }
     }
 
 }
