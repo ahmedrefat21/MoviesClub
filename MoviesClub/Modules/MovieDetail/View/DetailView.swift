@@ -47,30 +47,6 @@ struct DetailView: View {
             }
         }
     }
-    
-    // MARK: - COMPONENTS
-    private var detailsBar: some View {
-        HStack {
-            backButton
-            Spacer()
-        }
-        .padding(.horizontal, 15)
-    }
-    
-    private var backButton: some View {
-        Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "chevron.backward")
-                    .foregroundStyle(Color.textBase)
-                    .font(.titleLarge)
-
-            }
-        }
-    }
-    
-    
 }
 
 #Preview {

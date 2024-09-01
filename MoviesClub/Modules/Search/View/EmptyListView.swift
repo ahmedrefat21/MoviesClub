@@ -9,6 +9,9 @@ import SwiftUI
 
 struct EmptyListView: View {
     
+    // MARK: - Properties
+        var message: String
+    
     // MARK: - BODY
     var body: some View {
         VStack {
@@ -17,7 +20,7 @@ struct EmptyListView: View {
                 .scaledToFit()
             .frame(width: 100,height: 100)
             .padding(.bottom, 20)
-            Text("we are sorry, we can not find the movie ")
+            Text(message)
                 .font(.system(size: 16))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -27,5 +30,5 @@ struct EmptyListView: View {
 }
 
 #Preview {
-    EmptyListView()
+    EmptyListView(message: "we are sorry, we can not find the movie ")
 }
