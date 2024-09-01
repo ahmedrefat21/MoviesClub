@@ -16,6 +16,7 @@ struct EmptyListView: View {
                 .resizable()
                 .scaledToFit()
             .frame(width: 100,height: 100)
+            .padding(.bottom, 20)
             Text("we are sorry, we can not find the movie ")
                 .font(.system(size: 16))
                 .fontWeight(.bold)
