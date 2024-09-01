@@ -17,7 +17,8 @@ struct DetailView: View {
     // MARK: - BODY
     var body: some View {
         VStack(spacing: 20) {
-                detailsBar
+            
+            CustomBarView()
                 ScrollView(.vertical, showsIndicators: false) {
                     if let movieDetail = handler.movieDetail {
                         PosterView(posterImage: movieDetail.backdropPath, voteRate: movieDetail.voteAverage)
@@ -46,30 +47,6 @@ struct DetailView: View {
             }
         }
     }
-    
-    // MARK: - COMPONENTS
-    private var detailsBar: some View {
-        HStack {
-            backButton
-            Spacer()
-        }
-        .padding(.horizontal, 15)
-    }
-    
-    private var backButton: some View {
-        Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "chevron.backward")
-                    .foregroundStyle(Color.textBase)
-                    .font(.titleLarge)
-
-            }
-        }
-    }
-    
-    
 }
 
 #Preview {

@@ -42,6 +42,7 @@ struct HomeView: View {
             }
             
             .background(BackgroundStyle.background)
+            .navigationBarHidden(true)
         }
     }
 }
@@ -54,18 +55,29 @@ struct HomeView: View {
 private var homeHeader: some View {
     HStack {
         Spacer()
+
         Image("logo")
             .resizable()
             .scaledToFit()
-            .frame(width: 40,height:40,alignment: .center)
-        Text("Movies club")
+            .frame(width: 40, height: 40, alignment: .center)
+
+        Text("Movies Club")
             .font(.titleMedium)
             .fontWeight(.black)
             .foregroundStyle(Color.textBase)
             .shadow(color: .black, radius: 2)
+
         Spacer()
+
+        NavigationLink(destination: SearchView()) {
+            Image(systemName: "magnifyingglass")
+                .font(.title2)
+                .foregroundStyle(Color.textBase)
+                .padding(.trailing, 15)
+        }
     }
 }
+
 
 
 
