@@ -19,6 +19,7 @@
 		8B136A392C7F62D20080403E /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B136A2F2C7F62D20080403E /* RateView.swift */; };
 		8B1B1A262C7F77D2002815AD /* DetailView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B1A252C7F77D2002815AD /* DetailView+Extension.swift */; };
 		8B1B1A2F2C7F8EF6002815AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B1A2E2C7F8EF6002815AD /* Launch Screen.storyboard */; };
+		8BB391DB2C845C42006018E2 /* CustomSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB391DA2C845C42006018E2 /* CustomSearchTextField.swift */; };
 		8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A322C7C789700AD6B6F /* Font.swift */; };
 		8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A342C7C78B100AD6B6F /* Color.swift */; };
 		8BCA1A372C7C78DA00AD6B6F /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */; };
@@ -73,6 +74,7 @@
 		8B136A2F2C7F62D20080403E /* RateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		8B1B1A252C7F77D2002815AD /* DetailView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Extension.swift"; sourceTree = "<group>"; };
 		8B1B1A2E2C7F8EF6002815AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8BB391DA2C845C42006018E2 /* CustomSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextField.swift; sourceTree = "<group>"; };
 		8BCA1A322C7C789700AD6B6F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8BCA1A342C7C78B100AD6B6F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8BCA1A362C7C78DA00AD6B6F /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				8BEF94E82C806E5B00C1954D /* SearchMovieItem.swift */,
 				8BEF94EA2C806F6200C1954D /* SearchMovieList.swift */,
 				8BEF94EC2C8070C500C1954D /* SearchView.swift */,
+				8BB391DA2C845C42006018E2 /* CustomSearchTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				8B136A352C7F62D20080403E /* DescriptionView.swift in Sources */,
 				8B136A282C7F44D30080403E /* ErrorView.swift in Sources */,
 				8BCA1A352C7C78B100AD6B6F /* Color.swift in Sources */,
+				8BB391DB2C845C42006018E2 /* CustomSearchTextField.swift in Sources */,
 				8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */,
 				8BEF94EB2C806F6200C1954D /* SearchMovieList.swift in Sources */,
 				8BD3472F2C7A7EAD00E922DD /* ContentView.swift in Sources */,
@@ -581,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesClub/Preview Content\"";
-				DEVELOPMENT_TEAM = U98MB87JNM;
+				DEVELOPMENT_TEAM = 9N9VA4HG3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -612,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesClub/Preview Content\"";
-				DEVELOPMENT_TEAM = U98MB87JNM;
+				DEVELOPMENT_TEAM = 9N9VA4HG3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

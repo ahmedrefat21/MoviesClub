@@ -12,8 +12,6 @@ struct SearchView: View {
     // MARK: - Properties
     @StateObject var handler: SearchViewHandler = .init()
     @Environment(\.presentationMode) private var presentationMode
-    @State private var searchTerm: String = ""
-    @State private var isComplete: Bool = false
 
     // MARK: - BODY
     var body: some View {
@@ -24,10 +22,10 @@ struct SearchView: View {
                 TitleView(title: "Search", font: .largeTitle, addShadow: true)
                     .padding(15)
 
-                customSearchTextField
+                CustomSearchTextField(searchTerm: $handler.searchTerm)
 
                 VStack {
-                    if !isComplete {
+                    if !handler.isComplete {
                         Spacer()
                         EmptyListView()
                             .padding(.horizontal, 100)
@@ -37,10 +35,10 @@ struct SearchView: View {
                     }
                 }
 
-                Spacer()
+                //Spacer()
             }
             .background(BackgroundStyle.background)
-            
+            .navigationBarHidden(true)
             .overlay{
                 if let errorMessage = handler.errorMessage {
                     VStack {
@@ -49,43 +47,12 @@ struct SearchView: View {
                     }
                 }
             }
-            
-            
         }
         .navigationBarHidden(true)
+        
     }
 
-    // MARK: - SearchTextField
-    private var customSearchTextField: some View {
-        TextField("Search", text: $searchTerm)
-            .onChange(of: searchTerm) { newValue in
-                Task {
-                    await handler.getMovies(query: newValue)
-                    withAnimation(.linear(duration: 1)) {
-                        isComplete = !newValue.isEmpty
-                    }
-                }
-            }
-            .font(.titleMedium)
-            .padding(.horizontal, 15)
-            .foregroundStyle(Color.textBase)
-            .frame(height: 45)
-            .background(RoundedRectangle(cornerRadius: 16)
-                .fill(Color.lightBackground.opacity(0.5))
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.textStrokeBase, lineWidth: 2)
-                ))
-            .textFieldStyle(DefaultTextFieldStyle())
-            .padding()
-            .overlay(
-                Image(systemName: "magnifyingglass")
-                    .font(.title2)
-                    .foregroundStyle(Color.textBase)
-                    .padding(.horizontal, 25),
-                alignment: .trailing
-            )
-    }
+    
     
     // MARK: - COMPONENTS
     private var detailsBar: some View {

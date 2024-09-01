@@ -42,6 +42,7 @@ struct HomeView: View {
             }
             
             .background(BackgroundStyle.background)
+            .navigationBarHidden(true)
         }
     }
 }
