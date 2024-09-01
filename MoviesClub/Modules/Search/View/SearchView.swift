@@ -22,19 +22,26 @@ struct SearchView: View {
             
             CustomSearchTextField(searchTerm: $handler.searchTerm)
             VStack {
-                if handler.searchTerm.isEmpty {
+                switch handler.state {
+                case .initial:
                     Spacer()
-                    EmptyListView(message: "Please enter your movie you want to search for ")
+                    EmptyListView(message: "Please enter your movie you want to search for")
                         .padding(.horizontal, 100)
                     Spacer()
-                } else if handler.searchedMovies.isEmpty || !handler.isComplete {
+                case .loading:
+                    Spacer()
+                    LoadingView(message: "Loading movies...")
+                        .padding(.horizontal, 110)
+                    Spacer()
+                case .emptySearchResults:
                     Spacer()
                     EmptyListView(message: "We are sorry, we cannot find the movie")
                         .padding(.horizontal, 100)
                     Spacer()
-                } else {
+                case .searchedMovies:
                     SearchMovieList(movies: handler.searchedMovies)
                 }
+                
             }
             
             //Spacer()

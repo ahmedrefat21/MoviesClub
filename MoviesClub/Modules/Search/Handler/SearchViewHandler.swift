@@ -19,7 +19,7 @@ extension SearchView {
         @Published var searchedMovies: [Movie] = []
         @Published var errorMessage: String?
         @Published var searchTerm: String = ""
-        @Published var isComplete: Bool = false
+        @Published var state: SearchScreenState = .initial
         
         private var cancellables = Set<AnyCancellable>()
         private var movieNetwork = MovieNetwork()
@@ -29,13 +29,26 @@ extension SearchView {
                 .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
                 .removeDuplicates()
                 .sink { [weak self] newValue in
-                    Task {
-                        await self?.getMovies(query: newValue)
-                        self?.isComplete = !newValue.isEmpty
-                    }
+                    self?.updateState(for: newValue)
                 }
                             
                 .store(in: &cancellables)
+        }
+        
+        
+        // MARK: - Update State
+        private func updateState(for searchTerm: String) {
+            guard !searchTerm.isEmpty else {
+                state = .initial
+                return
+            }
+            
+            state = .loading
+            Task {
+                await getMovies(query: searchTerm)
+                state = searchedMovies.isEmpty ? .emptySearchResults : .searchedMovies
+            }
+            
         }
         
         //MARK: - getMovies
@@ -64,3 +77,10 @@ extension SearchView {
     }
 }
 
+
+enum SearchScreenState {
+    case initial
+    case loading
+    case emptySearchResults
+    case searchedMovies
+}
