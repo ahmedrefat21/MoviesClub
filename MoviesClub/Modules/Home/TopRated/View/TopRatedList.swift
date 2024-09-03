@@ -13,7 +13,7 @@ struct TopRatedList: View {
     @StateObject private var handler: TopRatedHandler = .init()
 
     var body: some View {
-        if handler.errorMessage != nil {
+        if handler.errorMessage == nil {
             VStack (alignment: .leading){
                 TitleView(title: "Top Rated Movies", font: .titleLarge, addShadow: true)
                     .padding(.leading,10)
