@@ -7,40 +7,28 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeScreen: View {
     
-    @StateObject private var handler: HomeViewHandler = .init()
     // MARK: - BODY
     var body: some View {
         
         NavigationView {
             VStack(spacing:20){
-            
                 homeHeader
                 ScrollView(.vertical,showsIndicators: false){
-                    // MARK: - ErrorView
-                    if let errorMessage = handler.errorMessage {
-                        ErrorView(errorMessage: errorMessage)
-                       
-                    } else {
-                        
-                        // MARK: - TopRatedList
-                        TopRatedList(movies:  handler.topRatedMovies)
-                        
-                        // MARK: - NowPlayingList
-                        NowPlayingList(movies: handler.nowPlayingMovies)
-                        
-                        // MARK: - PopularList
-                        StandardList(title: "Popular Movies", movies: handler.popularMovies,font: .titleLarge)
-                        
-                        // MARK: - UpcomingList
-                        StandardList(title: "Upcoming Movies", movies: handler.upcomingMovies ,font: .titleLarge)
-                    }
+                    // MARK: - TopRatedList
+                    TopRatedList()
                     
+                    // MARK: - NowPlayingList
+                    NowPlayingList()
                     
+                    // MARK: - PopularList
+                    PopularView()
+                    
+                    // MARK: - UpcomingList
+                    UpcomingView()
                 }
             }
-            
             .background(BackgroundStyle.background)
             .navigationBarHidden(true)
         }
@@ -48,7 +36,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeScreen()
 }
 
 // MARK: - HomeHeader

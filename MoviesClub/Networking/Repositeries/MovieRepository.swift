@@ -1,14 +1,33 @@
 //
-//  MovieNetwork.swift
+//  HomeRepositoryImpl.swift
 //  MoviesClub
 //
-//  Created by Ahmed Refat on 25/08/2024.
+//  Created by Ahmed Refat on 03/09/2024.
 //
 
 import Foundation
 
-class MovieNetwork {
-    static let shared = MovieNetwork()
+class MovieRepository : MovieRepositoryProtocol {
+    
+    func fetchPopularList() async throws -> Movies {
+        guard let url = MovieURL.popularListUrl else { throw CSError.invalidURL }
+        return try await GenericNetworkService.getData(from: url)
+    }
+
+    func fetchTopRatedList() async throws -> Movies {
+        guard let url = MovieURL.topRatedListUrl else { throw CSError.invalidURL }
+        return try await GenericNetworkService.getData(from: url)
+    }
+
+    func fetchUpcomingList() async throws -> Movies {
+        guard let url = MovieURL.upcomingListUrl else { throw CSError.invalidURL }
+        return try await GenericNetworkService.getData(from: url)
+    }
+
+    func fetchNowPlayingList() async throws -> Movies {
+        guard let url = MovieURL.nowPlayinListUrl else { throw CSError.invalidURL }
+        return try await GenericNetworkService.getData(from: url)
+    }
     
     func fetchMovieSearch(query: String) async throws -> Movies {
         guard let url = MovieURL.movieSearchUrl(withQuery: query) else { throw CSError.invalidURL }
@@ -29,5 +48,5 @@ class MovieNetwork {
         guard let url = MovieURL.creditsUrl(withId: "\(movieId)") else { throw CSError.invalidURL }
         return try await GenericNetworkService.getData(from: url)
     }
-    
 }
+
