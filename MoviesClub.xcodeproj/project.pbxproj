@@ -29,6 +29,8 @@
 		8B4963E12C8733B300E71633 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963E02C8733B300E71633 /* UpcomingView.swift */; };
 		8B4963E32C8733DA00E71633 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963E22C8733DA00E71633 /* PopularView.swift */; };
 		8B4963E52C873D8D00E71633 /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963E42C873D8D00E71633 /* MovieNetwork.swift */; };
+		8B4963E82C87417400E71633 /* DetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963E72C87417400E71633 /* DetailsUseCase.swift */; };
+		8B4963EA2C87418B00E71633 /* DetailsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4963E92C87418B00E71633 /* DetailsUseCaseProtocol.swift */; };
 		8BB391DB2C845C42006018E2 /* CustomSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB391DA2C845C42006018E2 /* CustomSearchTextField.swift */; };
 		8BB391DD2C848FB0006018E2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB391DC2C848FB0006018E2 /* LoadingView.swift */; };
 		8BCA1A332C7C789700AD6B6F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA1A322C7C789700AD6B6F /* Font.swift */; };
@@ -94,6 +96,8 @@
 		8B4963E02C8733B300E71633 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
 		8B4963E22C8733DA00E71633 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
 		8B4963E42C873D8D00E71633 /* MovieNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		8B4963E72C87417400E71633 /* DetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCase.swift; sourceTree = "<group>"; };
+		8B4963E92C87418B00E71633 /* DetailsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		8BB391DA2C845C42006018E2 /* CustomSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextField.swift; sourceTree = "<group>"; };
 		8BB391DC2C848FB0006018E2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8BCA1A322C7C789700AD6B6F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		8B4963C52C87247F00E71633 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				8B4963E62C87415900E71633 /* Details */,
 				8B4963CA2C8727AB00E71633 /* Home */,
 			);
 			path = UseCases;
@@ -289,6 +294,15 @@
 				8B4963DE2C8732E100E71633 /* UpcomingHandler.swift */,
 			);
 			path = Handler;
+			sourceTree = "<group>";
+		};
+		8B4963E62C87415900E71633 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8B4963E72C87417400E71633 /* DetailsUseCase.swift */,
+				8B4963E92C87418B00E71633 /* DetailsUseCaseProtocol.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		8BCA1A282C7C76FD00AD6B6F /* Modules */ = {
@@ -553,6 +567,7 @@
 				8B4963DB2C872DEA00E71633 /* NowPlayingHandler.swift in Sources */,
 				8BD347392C7A7EB000E922DD /* MoviesClub.xcdatamodeld in Sources */,
 				8B136A372C7F62D20080403E /* DetailView.swift in Sources */,
+				8B4963E82C87417400E71633 /* DetailsUseCase.swift in Sources */,
 				8BEAEA712C7E1B4400C69A5C /* TopRatedList.swift in Sources */,
 				8B4963CD2C87290600E71633 /* TopRatedHandler.swift in Sources */,
 				8B136A342C7F62D20080403E /* CastsList.swift in Sources */,
@@ -599,6 +614,7 @@
 				8BD3472D2C7A7EAD00E922DD /* MoviesClubApp.swift in Sources */,
 				8BCA1A3F2C7C7B4100AD6B6F /* Constants.swift in Sources */,
 				8B4963C92C87279600E71633 /* HomeUseCaseProtocol.swift in Sources */,
+				8B4963EA2C87418B00E71633 /* DetailsUseCaseProtocol.swift in Sources */,
 				8BD3474C2C7A850900E922DD /* MovieURL.swift in Sources */,
 				8B136A382C7F62D20080403E /* PosterView.swift in Sources */,
 				8BEAEA752C7E214F00C69A5C /* StandardList.swift in Sources */,
