@@ -17,16 +17,16 @@ struct HomeScreen: View {
                 homeHeader
                 ScrollView(.vertical,showsIndicators: false){
                     // MARK: - TopRatedList
-                    TopRatedList()
+                    TopRatedWidget()
                     
                     // MARK: - NowPlayingList
-                    NowPlayingList()
+                    NowPlayingWidget()
                     
                     // MARK: - PopularList
-                    PopularView()
+                    PopularWidget()
                     
                     // MARK: - UpcomingList
-                    UpcomingView()
+                    UpcomingWidget()
                 }
             }
             .background(BackgroundStyle.background)

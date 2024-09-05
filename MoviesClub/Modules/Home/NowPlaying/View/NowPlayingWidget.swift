@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NowPlayingList: View {
+struct NowPlayingWidget: View {
     
     @StateObject private var handler: NowPlayingHandler = .init()
     var body: some View {
@@ -19,7 +19,7 @@ struct NowPlayingList: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
                         ForEach(handler.nowPlayingMovies.indices, id: \.self) { index in
-                            NavigationLink(destination: DetailView(movieId: handler.nowPlayingMovies[index].id ?? 0)) {
+                            NavigationLink(destination: DetailScreen(movieId: handler.nowPlayingMovies[index].id ?? 0)) {
                                 NowPlayingListItem(movie: handler.nowPlayingMovies[index])
                             }
                         }
@@ -32,5 +32,5 @@ struct NowPlayingList: View {
 }
 
 #Preview {
-    NowPlayingList()
+    NowPlayingWidget()
 }

@@ -20,7 +20,7 @@ struct StandardList: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
                     ForEach(movies.indices, id: \.self) { index in
-                        NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                        NavigationLink(destination: DetailScreen(movieId: movies[index].id ?? 0)) {
                             StandardListItem(movie: movies[index])
                         }
                     }

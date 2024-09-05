@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UpcomingView: View {
+struct UpcomingWidget: View {
     
     @StateObject private var handler: UpcomingHandler = .init()
     var body: some View {
@@ -18,5 +18,5 @@ struct UpcomingView: View {
 }
 
 #Preview {
-    UpcomingView()
+    UpcomingWidget()
 }

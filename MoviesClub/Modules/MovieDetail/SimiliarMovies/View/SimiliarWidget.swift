@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SimiliarMoviesView: View {
+struct SimiliarWidget: View {
     @StateObject private var handler: SimiliarMoviesHandler = .init()
     
     //MARK: - PROPERTIES
@@ -29,5 +29,5 @@ struct SimiliarMoviesView: View {
 }
 
 #Preview {
-    SimiliarMoviesView(movieId: 845111)
+    SimiliarWidget(movieId: 845111)
 }

@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import os
 
-extension UpcomingView {
+extension UpcomingWidget {
     @MainActor
     class UpcomingHandler: ObservableObject {
         //MARK: - PROPERTIES

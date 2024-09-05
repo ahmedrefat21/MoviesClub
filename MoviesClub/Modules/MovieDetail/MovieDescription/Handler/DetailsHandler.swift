@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-extension DetailsContentView {
+extension DetailsWidget {
     @MainActor
     class DetailsHandler: ObservableObject {
         //MARK: - PROPERTIES

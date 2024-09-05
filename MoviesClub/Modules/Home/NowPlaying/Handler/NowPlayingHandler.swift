@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-extension NowPlayingList {
+extension NowPlayingWidget {
     @MainActor
     class NowPlayingHandler: ObservableObject {
         //MARK: - PROPERTIES

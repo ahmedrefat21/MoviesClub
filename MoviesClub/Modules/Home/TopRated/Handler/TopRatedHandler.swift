@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-extension TopRatedList {
+extension TopRatedWidget {
     @MainActor
     class TopRatedHandler: ObservableObject {
         //MARK: - PROPERTIES

@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import os
 
-extension SimiliarMoviesView {
+extension SimiliarWidget {
     @MainActor
     class SimiliarMoviesHandler: ObservableObject {
         //MARK: - PROPERTIES

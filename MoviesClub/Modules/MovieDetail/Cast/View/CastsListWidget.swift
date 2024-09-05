@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CastsList: View {
+struct CastsListWidget: View {
     
     @StateObject private var handler: CastHandler = .init()
     //MARK: - PROPERTIES
@@ -35,6 +35,11 @@ struct CastsList: View {
             }
         }
     }
+}
+
+
+#Preview {
+    CastsListWidget(movieId: 845111)
 }
 
 

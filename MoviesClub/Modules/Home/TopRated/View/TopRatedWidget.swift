@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopRatedList: View {
+struct TopRatedWidget: View {
     
     
     @StateObject private var handler: TopRatedHandler = .init()
@@ -21,7 +21,7 @@ struct TopRatedList: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
                         ForEach(handler.topRatedMovies.indices, id: \.self) { index in
-                            NavigationLink(destination: DetailView(movieId:handler.topRatedMovies [index].id ?? 0)) {
+                            NavigationLink(destination: DetailScreen(movieId:handler.topRatedMovies [index].id ?? 0)) {
                                 TopRatedListItem(movie: handler.topRatedMovies [index], number: index + 1)
                             }
                         }
@@ -34,5 +34,5 @@ struct TopRatedList: View {
 }
 
 #Preview {
-    TopRatedList()
+    TopRatedWidget()
 }

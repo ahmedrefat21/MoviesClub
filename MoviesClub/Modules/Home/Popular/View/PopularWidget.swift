@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopularView: View {
+struct PopularWidget: View {
     @StateObject private var handler: PopularHandler = .init()
     var body: some View {
         if handler.errorMessage == nil {
@@ -17,5 +17,5 @@ struct PopularView: View {
 }
 
 #Preview {
-    PopularView()
+    PopularWidget()
 }

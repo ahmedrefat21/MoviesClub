@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-extension PopularView {
+extension PopularWidget {
     @MainActor
     class PopularHandler: ObservableObject {
         //MARK: - PROPERTIES

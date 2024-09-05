@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import os
 
-extension CastsList {
+extension CastsListWidget {
     @MainActor
     class CastHandler: ObservableObject {
         //MARK: - PROPERTIES

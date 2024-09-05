@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct DetailScreen: View {
     
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) private var presentationMode
@@ -19,9 +19,9 @@ struct DetailView: View {
             
             CustomBarView()
             ScrollView(.vertical, showsIndicators: false) {
-                DetailsContentView( movieId: movieId)
-                CastsList(movieId: movieId)
-                SimiliarMoviesView(movieId: movieId)
+                DetailsWidget( movieId: movieId)
+                CastsListWidget(movieId: movieId)
+                SimiliarWidget(movieId: movieId)
             }
         }
         .background(BackgroundStyle.background)
@@ -30,6 +30,6 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(movieId: 845111)
+    DetailScreen(movieId: 845111)
 }
 

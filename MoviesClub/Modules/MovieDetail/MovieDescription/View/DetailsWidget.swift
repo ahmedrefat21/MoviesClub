@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailsContentView: View {
+struct DetailsWidget: View {
     
     @StateObject private var handler: DetailsHandler = .init()
     //MARK: - PROPERTIES
@@ -41,5 +41,5 @@ struct DetailsContentView: View {
 }
 
 #Preview {
-    DetailsContentView(movieId: 845111)
+    DetailsWidget(movieId: 845111)
 }
