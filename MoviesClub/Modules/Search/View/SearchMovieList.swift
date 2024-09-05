@@ -17,7 +17,7 @@ struct SearchMovieList: View {
         ScrollView(.vertical,showsIndicators: false){
             VStack(alignment:.leading,spacing: 15){
                 ForEach(movies.indices, id: \.self) { index in
-                    NavigationLink(destination: DetailView(movieId: movies[index].id ?? 0)) {
+                    NavigationLink(destination: DetailScreen(movieId: movies[index].id ?? 0)) {
                         SearchMovieItem(posterImage: movies[index].posterPath, voteRate:  movies[index].voteAverage, releaseDate: movies[index].releaseDate, title: movies[index].title)
                     }
                 }
