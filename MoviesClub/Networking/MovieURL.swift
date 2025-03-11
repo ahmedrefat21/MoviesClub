@@ -12,7 +12,7 @@ struct MovieURL {
     
     private static let baseMovieURLString = "https://api.themoviedb.org/3/"
     static let baseImageURLString = "https://image.tmdb.org/t/p/w500/"
-    private static let apiKey = "Your API Key"
+    private static let apiKey = "54bf172efc96c9a83d5e9e371e197896"
     
 
     private static func movieURL(endpoint: MovieEndpoint, parameters: [String: String]?) -> URL? {
