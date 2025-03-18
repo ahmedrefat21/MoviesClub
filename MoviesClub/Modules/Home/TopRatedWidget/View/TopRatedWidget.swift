@@ -21,8 +21,8 @@ struct TopRatedWidget: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
                         ForEach(handler.topRatedMovies.indices, id: \.self) { index in
-                            NavigationLink(destination: DetailScreen(movieId:handler.topRatedMovies [index].id ?? 0)) {
-                                TopRatedListItem(movie: handler.topRatedMovies [index], number: index + 1)
+                            NavigationLink(destination: DetailScreen(movieId:handler.topRatedMovies[index].id ?? 0)) {
+                                TopRatedListItem(movie: handler.topRatedMovies[index], number: index + 1)
                             }
                         }
                     }

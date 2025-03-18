@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomBarView: View {
     
     // MARK: - Properties
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) private var presentationMode
 
         
     // MARK: - Body
@@ -19,15 +19,16 @@ struct CustomBarView: View {
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                        .foregroundStyle(Color.textBase)
-                        .font(.titleLarge)
-                }
+                Image(systemName: "chevron.left")
+                    .font(.title2)
+                    .foregroundStyle(Color.textBase)
             }
+            .accessibilityIdentifier("backButton")
+            
             Spacer()
         }
         .padding(.horizontal, 15)
+        .padding(.vertical, 10)
     }
 }
 

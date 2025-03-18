@@ -31,6 +31,7 @@ struct SearchMovieItem: View {
                         .clipShape(.rect(cornerRadius: 16))
                         .scaleEffect(isAnimating ? 1 : 0.7)
                         .opacity(isAnimating ? 1 : 0.7)
+                        .accessibilityIdentifier("searchMovieImage")
                     
                     VStack(alignment: .leading,spacing: 25){
                         Text(title)
@@ -57,6 +58,7 @@ struct SearchMovieItem: View {
                         }
                     }
                 }
+                .accessibilityIdentifier("searchMovieItem")
             }
         }
         .padding(.horizontal,10)

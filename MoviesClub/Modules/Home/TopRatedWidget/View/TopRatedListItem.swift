@@ -21,6 +21,7 @@ struct TopRatedListItem: View {
                     .scaledToFit()
                     .frame(width: 140,height: 210)
                     .clipShape(.rect(cornerRadius: 16))
+                    .accessibilityIdentifier("movieItem_\(movie.id ?? 0)")
                 //MARK: - MovieOrder
                 StrokeText(
                     text: "\(number)",

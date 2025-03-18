@@ -23,6 +23,7 @@ struct SimiliarWidget: View {
                         await handler.getSimilarMovies(withId: movieId)
                     }
                 }
+                .accessibilityIdentifier("similarMoviesList")
         }
     }
         

@@ -18,15 +18,19 @@ struct HomeScreen: View {
                 ScrollView(.vertical,showsIndicators: false){
                     // MARK: - TopRatedList
                     TopRatedWidget()
+                        .accessibilityIdentifier("topRatedSection")
                     
                     // MARK: - NowPlayingList
                     NowPlayingWidget()
+                        .accessibilityIdentifier("nowPlayingSection")
                     
                     // MARK: - PopularList
                     PopularWidget()
+                        .accessibilityIdentifier("popularSection")
                     
                     // MARK: - UpcomingList
                     UpcomingWidget()
+                        .accessibilityIdentifier("upcomingSection")
                 }
             }
             .background(BackgroundStyle.background)
@@ -62,6 +66,7 @@ private var homeHeader: some View {
                 .font(.title2)
                 .foregroundStyle(Color.textBase)
                 .padding(.trailing, 15)
+                .accessibilityIdentifier("magnifyingglass")
         }
     }
 }

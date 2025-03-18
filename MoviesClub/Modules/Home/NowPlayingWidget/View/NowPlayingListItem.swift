@@ -18,6 +18,7 @@ struct NowPlayingListItem: View {
                     .scaledToFit()
                     .frame(width: 175,height: 100)
                     .clipShape(.rect(cornerRadius: 16))
+                    .accessibilityIdentifier("movieItem_\(movie.id ?? 0)")
                 
                 VStack (alignment:.leading,spacing: 10){
                     //MARK: - TITLE

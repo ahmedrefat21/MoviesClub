@@ -25,6 +25,7 @@ struct CustomSearchTextField: View {
                         .stroke(Color.textStrokeBase, lineWidth: 2)
                 ))
             .textFieldStyle(DefaultTextFieldStyle())
+            .accessibilityIdentifier("searchTextField")
             .padding()
             .overlay(
                 Image(systemName: "magnifyingglass")

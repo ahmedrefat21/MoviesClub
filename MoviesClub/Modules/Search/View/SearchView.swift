@@ -40,6 +40,7 @@ struct SearchView: View {
                     Spacer()
                 case .searchedMovies:
                     SearchMovieList(movies: handler.searchedMovies)
+                        .accessibilityIdentifier("searchResultsList")
                 }
                 
             }

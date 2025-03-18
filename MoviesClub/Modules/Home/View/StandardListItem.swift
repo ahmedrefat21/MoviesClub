@@ -15,6 +15,7 @@ struct StandardListItem: View {
                 CustomImageView(imagePath: imagePath)
                     .frame(width: 100,height: 145)
                     .clipShape(.rect(cornerRadius: 16))
+                    .accessibilityIdentifier("movieItem_\(movie.id ?? 0)")
             }
         }
         .padding(10)
